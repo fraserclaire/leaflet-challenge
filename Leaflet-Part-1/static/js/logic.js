@@ -55,14 +55,14 @@ d3.json(url).then(function(earthquakeData) {
     // Loop through all objects in dataset
     earthquakeData.features.forEach(function(data) {
         // Save coordinates as objects
-        let longtitude = data.geometry.coordinates[0];
+        let longitude = data.geometry.coordinates[0];
         let latitude = data.geometry.coordinates[1];
         let depth = data.geometry.coordinates[2];
         let magnitude = data.properties.mag;
         let title = data.properties.title;
 
         // Create layer
-        let circle = L.circle([latitude, longtitude], {
+        let circle = L.circle([latitude, longitude], {
             color: "black",
             fillColor: depthColor(depth),
             fillOpacity: 0.6,
@@ -71,7 +71,7 @@ d3.json(url).then(function(earthquakeData) {
         }).addTo(myMap);
 
         circle.bindPopup("<h3>" + title + "</h3> <hr> <p>" + 
-        "Coordinates: " latitude + ", " + longitude + "</p> <p>" 
+        "Coordinates: " + longitude + ", " + latitude + ", " + depth + "</p> <p>" +
         "Magnitude: " + magnitude + "</p> <p>" + 
         "Depth: " + depth + "</p>");
     });
@@ -93,48 +93,3 @@ d3.json(url).then(function(earthquakeData) {
     };
     legend.addTo(myMap);
 });
-
-
-// Get data
-// d3.json(url).then(function(earthquakeData) {
-//     // // Loop through all objects in dataset
-//     // earthquakeData.features.forEach(function(data) {
-//         // Save coordinates as objects
-//         let longtitude = earthquakeData.features[0].geometry.coordinates[0];
-//         let latitude = earthquakeData.features[0].geometry.coordinates[1];
-//         let depth = earthquakeData.features[0].geometry.coordinates[2];
-//         let magnitude = earthquakeData.features[0].properties.mag;
-//         let title = earthquakeData.features[0].properties.title;
-
-//         console.log(magnitude);
-//         console.log(magSize(magnitude));
-
-//         // Create layer
-//         let circle = L.circle([latitude, longtitude], {
-//             color: "black",
-//             fillColor: depthColor(depth),
-//             fillOpacity: 0.6,
-//             radius: magSize(magnitude),
-//             weight: 1
-//         }).addTo(myMap);
-
-//         circle.bindPopup("<h3>" + title + "</h3> <hr> <p>" + "Magnitude: " + magnitude + "</p> <p>" + "Depth: " + depth + "</p>");
-//     // });
-//     // Add legend
-//     let legendRanges = "<h3>Depth</h3>" +
-//                     "<p><span style='background-color: LimeGreen'></span> < 10</p>" +
-//                     "<p><span style='background-color: GreenYellow'></span> 10 - 30</p>" +
-//                     "<p><span style='background-color: Yellow'></span> 30 - 50</p>" +
-//                     "<p><span style='background-color: Orange'></span> 50 - 70</p>" +
-//                     "<p><span style='background-color: DarkOrange'></span> 70 - 90</p>" +
-//                     "<p><span style='background-color: Red'></span> 90+</p>";
-
-//     let legend = L.control({position: "bottomright"});
-
-//     legend.onAdd = function (myMap) {
-//         let div = L.DomUtil.create("div", "info legend");
-//         div.innerHTML = legendRanges;
-//         return div;
-//     };
-//     legend.addTo(myMap);
-// });
