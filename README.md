@@ -6,7 +6,7 @@ Goal is to provide timely, useful information about the Earth.
 
 ## Selected dataset:
 
--Significant earthquakes over the past 30 days
+Significant earthquakes over the past 30 days
 https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson
 
 ## What to include:

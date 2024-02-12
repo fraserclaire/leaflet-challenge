@@ -8,3 +8,26 @@ body,
 html {
   height: 100%;
 }
+
+.info.legend {
+  background: white;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.info.legend h3 {
+  margin-top: 0;
+}
+
+.info.legend p {
+  margin: 5px 0;
+}
+
+.info.legend span {
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin-right: 5px;
+}
