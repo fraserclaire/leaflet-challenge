@@ -9,9 +9,14 @@ Selected dataset:
 https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson
 
 What to include:
+
 -map with dots indicating each earthquake at a specific location
+
 -size of dot represents magnitude (higher magnitude = larger)
+
 -color of dot indicates depth (greater depth = darker, depth listed as the third coordinate for each earthquake)
+
 -popup boxes with additional info
+
 -legend providing context (size and color)
 
