@@ -1,15 +1,15 @@
 # leaflet-challenge
-Module 15 Challenge
+## Module 15 Challenge
 
 United States Geological Survey provides scientific data for various environmental measures.
 Goal is to provide timely, useful information about the Earth.
 
-Selected dataset:
+## Selected dataset:
 
 -Significant earthquakes over the past 30 days
 https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson
 
-What to include:
+## What to include:
 
 -map with dots indicating each earthquake at a specific location
 
